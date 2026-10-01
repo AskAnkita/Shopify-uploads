@@ -1,0 +1,655 @@
+=== --push-titles --live ===
+
+Store     0cz13u-ch.myshopify.com
+Shop      ChainandBracelet (0cz13u-ch.myshopify.com) — connected
+Products  reading your store…Products  101 already in the store            
+Render    /Users/ankitagupta/Google Drive/My Drive/Asimi/C&B/Render + ./_test-renders — 48 items, 766 files
+          + 53 product(s) with copy but no render folder (managed, nothing to upload)
+Sheet     ./packing-list.csv — 22 items parsed
+Prices    ./price-list.csv — 115 items in USD
+Video     included
+Mode      LIVE
+
+✓ AJER723      2.3 CTW Heart Cut Lab-Grown Diamond Halo Stud Earrings
+✓ AJER759      2 CTW Asscher Cut Lab-Grown Diamond Stud Earrings
+✓ AJER772      0.51 CTW Pavé Lab-Grown Diamond Huggie Hoop Earrings
+✓ AJER778      4.2 CTW Emerald Cut Lab-Grown Diamond Huggie Hoop Earrings
+✓ AJER826      0.2 CTW Round Brilliant Lab-Grown Diamond Solitaire Huggie Hoop Earrings
+✓ AJER827      1 CTW Pear Cut Lab-Grown Diamond Two-Stone Stud Earrings
+✓ AJLB20       3.06 CTW Round Brilliant Lab-Grown Diamond Tennis Bracelet
+✓ AJLB26       20 CTW Pear Cut Lab-Grown Diamond Tennis Bracelet
+✓ AJLB51       1 CTW Oval Cut Lab-Grown Diamond Solitaire Bracelet
+✓ AJLB52       1 CTW Pear Cut Lab-Grown Diamond Solitaire Bracelet
+✓ AJLB53       1 CTW Marquise Cut Lab-Grown Diamond Solitaire Bracelet
+✓ AJLB54       1 CTW Emerald Cut Lab-Grown Diamond Solitaire Bracelet
+✓ AJLB118      2 CTW Round Brilliant Lab-Grown Diamond Adjustable Bolo Bracelet
+✓ AJLB130      5.93 CTW Baguette & Round Cut Lab-Grown Diamond Bracelet
+✓ AJLB143      18 CTW Mixed Cut Lab-Grown Diamond Statement Bracelet
+✓ AJLB144      15 CTW Mixed Cut Lab-Grown Diamond Bracelet
+✓ AJLB152      19.5 CTW Emerald Cut Lab-Grown Diamond Tennis Bracelet
+✓ AJLB157      9.9 CTW Pear Cut Lab-Grown Diamond Tennis Bracelet
+✓ AJLB160      1.05 CTW Round Brilliant Lab-Grown Diamond Cuban Link Bracelet
+✓ AJLB161      6 CTW Oval Cut Lab-Grown Diamond Tennis Bracelet
+✓ AJLB167      11.2 CTW Emerald Cut Lab-Grown Diamond Tennis Bracelet
+✓ AJLB221      0.67 CTW Emerald Cut Lab-Grown Diamond Cuban Link Bracelet
+✓ AJNT26       33 CTW Round Brilliant Lab-Grown Diamond Tennis Necklace
+✓ AJNT27       14 CTW Marquise & Pear Cut Lab-Grown Diamond Cluster Necklace
+✓ AJNT37       23 CTW Round Brilliant Lab-Grown Diamond Tennis Necklace
+✓ AJNT46       15.34 CTW Pear Cut Lab-Grown Diamond Fringe Necklace
+✓ AJNT59       1.09 CTW Oval Cut Lab-Grown Diamond Station Necklace
+✓ AJNT60       2 CTW Round Brilliant Lab-Grown Diamond Solitaire Necklace
+✓ AJNT61       2 CTW Heart Cut Lab-Grown Diamond Solitaire Necklace
+✓ AJNT64       1.09 CTW Emerald Cut Lab-Grown Diamond Station Necklace
+✓ AJNT65       35.4 CTW Marquise Cut Lab-Grown Diamond Statement Necklace
+✓ AJNT68       0.5 CTW Round Brilliant Lab-Grown Diamond Bezel Solitaire Necklace
+✓ AJPD78       2.36 CTW Mixed Cut Lab-Grown Diamond Pendant
+✓ AJPD263      0.25 CTW Initial & Round Brilliant Lab-Grown Diamond Station Necklace
+✓ AJPD294      4 CTW Oval, Emerald & Pear Cut Lab-Grown Diamond Cluster Necklace
+✓ AJPD295      0.68 CTW Multi-Cut Lab-Grown Diamond Bar Necklace
+✓ AJPD439      2.24 CTW Pear Cut Lab-Grown Diamond Graduated Smile Necklace
+✓ AJPD442      3 CTW Heart Cut Lab-Grown Diamond Clover Pendant Necklace
+✓ AJPD446      0.48 CTW Pear Cut Green Gemstone & Lab-Grown Diamond Toi et Moi Necklace
+✓ AJPD447      0.5 CTW Pear Cut Lab-Grown Diamond Key Pendant Necklace
+✓ AJPD448      0.18 CTW Marquise Cut Blue Gemstone Evil Eye Heart Pendant Necklace
+✓ AJPD451      2.04 CTW Round Brilliant Lab-Grown Diamond Cross Pendant Necklace
+✓ AJPD455      1.9 CTW Round Brilliant Lab-Grown Diamond Solitaire Pendant Necklace
+✓ AJPD456      3 CTW Marquise Cut Lab-Grown Diamond Bezel Pendant Necklace
+✓ AJPD459      0.44 CTW Pear & Round Cut Lab-Grown Diamond Cross Pendant Necklace
+✓ AJPDP85      4 CTW Pear Cut Lab-Grown Diamond Star Pendant Necklace
+
+46 renamed, 55 already correct.
+
+exit=0
+
+=== --sync-prices --force --live ===
+
+Store     0cz13u-ch.myshopify.com
+Shop      ChainandBracelet (0cz13u-ch.myshopify.com) — connected
+Products  reading your store…Products  101 already in the store            
+Render    /Users/ankitagupta/Google Drive/My Drive/Asimi/C&B/Render + ./_test-renders — 48 items, 766 files
+          + 53 product(s) with copy but no render folder (managed, nothing to upload)
+Sheet     ./packing-list.csv — 22 items parsed
+Prices    ./price-list.csv — 115 items in USD
+Video     included
+Mode      LIVE
+
+✓ AJER666      7 variant price(s) set
+✓ AJER668      10 variant price(s) set
+✓ AJER680      6 variant price(s) set
+✓ AJER723      7 variant price(s) set
+✓ AJER758      10 variant price(s) set
+✓ AJER759      10 variant price(s) set
+✓ AJER772      9 variant price(s) set
+✓ AJER778      7 variant price(s) set
+✓ AJER826      3 variant price(s) set
+✓ AJER827      10 variant price(s) set
+✓ AJLB20       40 variant price(s) set
+✓ AJLB68       40 variant price(s) set
+✓ AJLB110      40 variant price(s) set
+✓ AJLB118      40 variant price(s) set
+✓ AJLB185      40 variant price(s) set
+✓ AJLB187      40 variant price(s) set
+✓ AJLB200      40 variant price(s) set
+✓ AJLB206      40 variant price(s) set
+✓ AJLB220      40 variant price(s) set
+✓ AJLB221      40 variant price(s) set
+✓ AJLB222      40 variant price(s) set
+✓ AJLB223      40 variant price(s) set
+✓ AJLB228      40 variant price(s) set
+✓ AJLB236      40 variant price(s) set
+✓ AJLR134      10 variant price(s) set
+✓ AJLR211      10 variant price(s) set
+✓ AJLR255      10 variant price(s) set
+✓ AJLR257      10 variant price(s) set
+✓ AJLR262      10 variant price(s) set
+✓ AJLR272      10 variant price(s) set
+✓ AJLR274      10 variant price(s) set
+✓ AJLR299      10 variant price(s) set
+✓ AJLR307      10 variant price(s) set
+✓ AJLR379      10 variant price(s) set
+✓ AJLR389      10 variant price(s) set
+✓ AJLR416      10 variant price(s) set
+✓ AJLR511      10 variant price(s) set
+✓ AJLR559      10 variant price(s) set
+✓ AJLR602      10 variant price(s) set
+? AJNT26       couldn't match 15 variant(s) to a material
+               first variant: sku=(none)  options: Jewelry material=White gold | Length=16 in
+✓ AJNT59       50 variant price(s) set
+✓ AJNT63       50 variant price(s) set
+✓ AJNT64       50 variant price(s) set
+✓ AJNT68       50 variant price(s) set
+✓ AJPD201      50 variant price(s) set
+✓ AJPD202      50 variant price(s) set
+✓ AJPD203      50 variant price(s) set
+✓ AJPD236      50 variant price(s) set
+✓ AJPD243      50 variant price(s) set
+✓ AJPD262      50 variant price(s) set
+✓ AJPD263      50 variant price(s) set
+✓ AJPD278      50 variant price(s) set
+✓ AJPD279      50 variant price(s) set
+✓ AJPD294      50 variant price(s) set
+✓ AJPD295      50 variant price(s) set
+✓ AJPD301      50 variant price(s) set
+✓ AJPD352      50 variant price(s) set
+✓ AJPD361      50 variant price(s) set
+✓ AJPD370      50 variant price(s) set
+✓ AJPD403      50 variant price(s) set
+✓ AJPD404      50 variant price(s) set
+✓ AJPD405      50 variant price(s) set
+✓ AJPD408      50 variant price(s) set
+✓ AJPD409      50 variant price(s) set
+✓ AJPD410      50 variant price(s) set
+✓ AJPD411      50 variant price(s) set
+✓ AJPD412      50 variant price(s) set
+✓ AJPD413      50 variant price(s) set
+✓ AJPD439      50 variant price(s) set
+✓ AJPD442      50 variant price(s) set
+✓ AJPD446      50 variant price(s) set
+✓ AJPD447      50 variant price(s) set
+✓ AJPD448      50 variant price(s) set
+✓ AJPD451      50 variant price(s) set
+✓ AJPD455      50 variant price(s) set
+✓ AJPD456      50 variant price(s) set
+✓ AJPD459      50 variant price(s) set
+✓ AJPDP85      50 variant price(s) set
+
+77 products repriced, 22 already correct.
+No price anywhere for: AJLB96, BR24435
+
+exit=0
+
+=== --sync-lengths --force --live ===
+
+Store     0cz13u-ch.myshopify.com
+Shop      ChainandBracelet (0cz13u-ch.myshopify.com) — connected
+Products  reading your store…Products  101 already in the store            
+Render    /Users/ankitagupta/Google Drive/My Drive/Asimi/C&B/Render + ./_test-renders — 48 items, 766 files
+          + 53 product(s) with copy but no render folder (managed, nothing to upload)
+Sheet     ./packing-list.csv — 22 items parsed
+Prices    ./price-list.csv — 115 items in USD
+Video     included
+Mode      LIVE
+
+· AJLB20      bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB20      40 variants, 30 priced
+· AJLB26      bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB26      40 variants, 30 priced
+· AJLB51      bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB51      40 variants, 30 priced
+· AJLB52      bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB52      40 variants, 30 priced
+· AJLB53      bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB53      40 variants, 30 priced
+· AJLB54      bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB54      40 variants, 30 priced
+· AJLB68      bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB68      40 variants, 30 priced
+· AJLB96      bracelet  10 metals x 4 lengths = 40 variants
+⚠ AJLB96      no price in ./price-list.csv — every length left at 0
+✓ AJLB96      40 variants, 0 priced
+· AJLB110     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB110     40 variants, 30 priced
+· AJLB118     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB118     40 variants, 30 priced
+· AJLB130     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB130     40 variants, 30 priced
+· AJLB143     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB143     40 variants, 30 priced
+· AJLB144     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB144     40 variants, 30 priced
+· AJLB152     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB152     40 variants, 30 priced
+· AJLB157     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB157     40 variants, 30 priced
+· AJLB160     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB160     40 variants, 30 priced
+· AJLB161     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB161     40 variants, 30 priced
+· AJLB167     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB167     40 variants, 30 priced
+· AJLB185     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB185     40 variants, 30 priced
+· AJLB187     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB187     40 variants, 30 priced
+· AJLB200     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB200     40 variants, 30 priced
+· AJLB206     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB206     40 variants, 30 priced
+· AJLB220     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB220     40 variants, 30 priced
+· AJLB221     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB221     40 variants, 30 priced
+· AJLB222     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB222     40 variants, 30 priced
+· AJLB223     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB223     40 variants, 30 priced
+· AJLB228     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB228     40 variants, 30 priced
+· AJLB236     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB236     40 variants, 30 priced
+· AJNT26      necklace  3 metals x 5 lengths = 15 variants
+✓ AJNT26      15 variants, 0 priced
+· AJNT27      necklace  10 metals x 5 lengths = 50 variants
+✓ AJNT27      50 variants, 40 priced
+· AJNT37      necklace  10 metals x 5 lengths = 50 variants
+✓ AJNT37      50 variants, 40 priced
+· AJNT46      necklace  10 metals x 5 lengths = 50 variants
+✓ AJNT46      50 variants, 40 priced
+· AJNT59      necklace  10 metals x 5 lengths = 50 variants
+✓ AJNT59      50 variants, 40 priced
+· AJNT60      necklace  10 metals x 5 lengths = 50 variants
+✓ AJNT60      50 variants, 40 priced
+· AJNT61      necklace  10 metals x 5 lengths = 50 variants
+✓ AJNT61      50 variants, 40 priced
+· AJNT62      necklace  10 metals x 5 lengths = 50 variants
+✓ AJNT62      50 variants, 40 priced
+· AJNT63      necklace  10 metals x 5 lengths = 50 variants
+✓ AJNT63      50 variants, 40 priced
+· AJNT64      necklace  10 metals x 5 lengths = 50 variants
+✓ AJNT64      50 variants, 40 priced
+· AJNT65      necklace  10 metals x 5 lengths = 50 variants
+✓ AJNT65      50 variants, 40 priced
+· AJNT68      necklace  10 metals x 5 lengths = 50 variants
+✓ AJNT68      50 variants, 40 priced
+· AJPD78      necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD78      50 variants, 40 priced
+· AJPD201     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD201     50 variants, 40 priced
+· AJPD202     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD202     50 variants, 40 priced
+· AJPD203     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD203     50 variants, 40 priced
+· AJPD236     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD236     50 variants, 40 priced
+· AJPD243     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD243     50 variants, 40 priced
+· AJPD262     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD262     50 variants, 40 priced
+· AJPD263     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD263     50 variants, 40 priced
+· AJPD278     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD278     50 variants, 40 priced
+· AJPD279     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD279     50 variants, 40 priced
+· AJPD294     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD294     50 variants, 40 priced
+· AJPD295     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD295     50 variants, 40 priced
+· AJPD301     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD301     50 variants, 40 priced
+· AJPD352     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD352     50 variants, 40 priced
+· AJPD361     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD361     50 variants, 40 priced
+· AJPD370     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD370     50 variants, 40 priced
+· AJPD403     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD403     50 variants, 40 priced
+· AJPD404     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD404     50 variants, 40 priced
+· AJPD405     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD405     50 variants, 40 priced
+· AJPD408     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD408     50 variants, 40 priced
+· AJPD409     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD409     50 variants, 40 priced
+· AJPD410     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD410     50 variants, 40 priced
+· AJPD411     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD411     50 variants, 40 priced
+· AJPD412     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD412     50 variants, 40 priced
+· AJPD413     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD413     50 variants, 40 priced
+· AJPD439     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD439     50 variants, 40 priced
+· AJPD442     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD442     50 variants, 40 priced
+· AJPD446     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD446     50 variants, 40 priced
+· AJPD447     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD447     50 variants, 40 priced
+· AJPD448     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD448     50 variants, 40 priced
+· AJPD451     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD451     50 variants, 40 priced
+· AJPD455     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD455     50 variants, 40 priced
+· AJPD456     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD456     50 variants, 40 priced
+· AJPD459     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD459     50 variants, 40 priced
+· AJPDP85     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPDP85     50 variants, 40 priced
+· BR24435     bracelet  3 metals x 4 lengths = 12 variants
+⚠ BR24435     no price in ./price-list.csv — every length left at 0
+✓ BR24435     12 variants, 12 priced
+
+76 product(s) would gain a "Length" option, 76 done.
+
+exit=0
+
+=== --sync-variants --only AJNT26,AJLB185 --live ===
+
+Store     0cz13u-ch.myshopify.com
+Shop      ChainandBracelet (0cz13u-ch.myshopify.com) — connected
+Products  reading your store…Products  101 already in the store            
+Render    /Users/ankitagupta/Google Drive/My Drive/Asimi/C&B/Render + ./_test-renders — 48 items, 766 files
+          + 53 product(s) with copy but no render folder (managed, nothing to upload)
+Sheet     ./packing-list.csv — 22 items parsed
+Prices    ./price-list.csv — 115 items in USD
+Video     included
+Mode      LIVE
+
+= AJLB185      all 40 combination(s) present
+✖ AJNT26       productVariantsBulkCreate: variants.0.optionValues.0 Cannot set name for an option value linked to a metafield; variants
+
+exit=0
+
+=== --sync-skus --live ===
+
+Store     0cz13u-ch.myshopify.com
+Shop      ChainandBracelet (0cz13u-ch.myshopify.com) — connected
+Products  reading your store…Products  101 already in the store            
+Render    /Users/ankitagupta/Google Drive/My Drive/Asimi/C&B/Render + ./_test-renders — 48 items, 766 files
+          + 53 product(s) with copy but no render folder (managed, nothing to upload)
+Sheet     ./packing-list.csv — 22 items parsed
+Prices    ./price-list.csv — 115 items in USD
+Video     included
+Mode      LIVE
+
+  AJLB185     12 SKU(s)  e.g. AJLB185-G10K-R
+✖ AJLB185     fetch failed
+
+✖ TypeError: fetch failed
+
+exit=0
+
+=== --publish --live ===
+
+Store     0cz13u-ch.myshopify.com
+Shop      ChainandBracelet (0cz13u-ch.myshopify.com) — connected
+Products  reading your store…Products  101 already in the store            
+Render    /Users/ankitagupta/Google Drive/My Drive/Asimi/C&B/Render + ./_test-renders — 48 items, 766 files
+          + 53 product(s) with copy but no render folder (managed, nothing to upload)
+Sheet     ./packing-list.csv — 22 items parsed
+Prices    ./price-list.csv — 115 items in USD
+Video     included
+Mode      LIVE
+
+99 ready to publish, 2 not.
+
+  Multi-Gemstone Station Bracelet in Gold        no description; price at 0
+  Round Brilliant Lab-Grown Diamond Pavé Bangle  price at 0
+
+Ready: 0 to set Active, 99 to put on the Online Store.
+  11.2 CTW Emerald Cut Lab-Grown Diamond Tennis Bracel publish
+  23 CTW Round Brilliant Lab-Grown Diamond Tennis Neck publish
+  3.06 CTW Round Brilliant Lab-Grown Diamond Tennis Br publish
+  33 CTW Round Brilliant Lab-Grown Diamond Tennis Neck publish
+  20 CTW Pear Cut Lab-Grown Diamond Tennis Bracelet    publish
+  1 CTW Oval Cut Lab-Grown Diamond Solitaire Bracelet  publish
+  1 CTW Pear Cut Lab-Grown Diamond Solitaire Bracelet  publish
+  5.93 CTW Baguette & Round Cut Lab-Grown Diamond Brac publish
+  1 CTW Emerald Cut Lab-Grown Diamond Solitaire Bracel publish
+  18 CTW Mixed Cut Lab-Grown Diamond Statement Bracele publish
+  1 CTW Marquise Cut Lab-Grown Diamond Solitaire Brace publish
+  15 CTW Mixed Cut Lab-Grown Diamond Bracelet          publish
+  19.5 CTW Emerald Cut Lab-Grown Diamond Tennis Bracel publish
+  9.9 CTW Pear Cut Lab-Grown Diamond Tennis Bracelet   publish
+  1.05 CTW Round Brilliant Lab-Grown Diamond Cuban Lin publish
+  6 CTW Oval Cut Lab-Grown Diamond Tennis Bracelet     publish
+  14 CTW Marquise & Pear Cut Lab-Grown Diamond Cluster publish
+  15.34 CTW Pear Cut Lab-Grown Diamond Fringe Necklace publish
+  2 CTW Round Brilliant Lab-Grown Diamond Solitaire Ne publish
+  2 CTW Heart Cut Lab-Grown Diamond Solitaire Necklace publish
+  35.4 CTW Marquise Cut Lab-Grown Diamond Statement Ne publish
+  2.36 CTW Mixed Cut Lab-Grown Diamond Pendant         publish
+  4.2 CTW Emerald Cut Lab-Grown Diamond Huggie Hoop Ea publish
+  3 CTW Round Brilliant Lab-Grown Diamond Stud Earring publish
+  3 CTW Princess Cut Lab-Grown Diamond Stud Earrings   publish
+  3 CTW Marquise Cut Lab-Grown Diamond Stud Earrings   publish
+  2.3 CTW Heart Cut Lab-Grown Diamond Halo Stud Earrin publish
+  4 CTW Pear & Emerald Cut Lab-Grown Diamond Toi et Mo publish
+  2 CTW Asscher Cut Lab-Grown Diamond Stud Earrings    publish
+  0.51 CTW Pavé Lab-Grown Diamond Huggie Hoop Earrings publish
+  0.2 CTW Round Brilliant Lab-Grown Diamond Solitaire  publish
+  1 CTW Pear Cut Lab-Grown Diamond Two-Stone Stud Earr publish
+  2 CTW Marquise Cut Lab-Grown Diamond Station Necklac publish
+  2 CTW Oval Cut Lab-Grown Diamond Solitaire Engagemen publish
+  1.94 CTW Pear Cut Lab-Grown Diamond Cluster Engageme publish
+  2.3 CTW Round Brilliant Lab-Grown Diamond Full Etern publish
+  2.27 CTW Cushion Cut Lab-Grown Diamond Twist Engagem publish
+  2.29 CTW Pear Cut Lab-Grown Diamond Twist Engagement publish
+  Twisted Rope Lab-Grown Diamond Band Ring             publish
+  2.2 CTW Heart Cut Lab-Grown Diamond Three Stone Enga publish
+  2.09 CTW Asscher Cut Lab-Grown Diamond Twist Engagem publish
+  3.27 CTW Emerald Cut Lab-Grown Diamond Pavé Engageme publish
+  2 CTW Round Brilliant Lab-Grown Diamond Adjustable B publish
+  4 CTW Round Brilliant Lab-Grown Diamond Tennis Brace publish
+  2 CTW Round Brilliant Lab-Grown Diamond Tennis Brace publish
+  0.67 CTW Emerald Cut Lab-Grown Diamond Cuban Link Br publish
+  0.75 CTW Oval Cut Lab-Grown Diamond Cuban Link Brace publish
+  0.75 CTW Marquise Cut Lab-Grown Diamond Cuban Link B publish
+  Marquise Cut Lab-Grown Diamond Three Stone Engagemen publish
+  0.5 CTW Round Brilliant Lab-Grown Diamond Infinity P publish
+  1 CTW Emerald & Pear Cut Lab-Grown Diamond Toi et Mo publish
+  2 CTW Pear & Radiant Cut Lab-Grown Diamond Toi et Mo publish
+  5.46 CTW Emerald Cut Lab-Grown Diamond Pendant Neckl publish
+  1 CTW Asscher Cut Lab-Grown Diamond Solitaire Pendan publish
+  1.27 CTW Round Brilliant Lab-Grown Diamond Three Sto publish
+  Round Brilliant Lab-Grown Diamond Milgrain Wave Band publish
+  2.25 CTW Cushion Cut Lab-Grown Diamond Halo Engageme publish
+  2.52 CTW Pear Cut Lab-Grown Diamond Solitaire Engage publish
+  1.12 CTW Round Brilliant Lab-Grown Diamond Double Ro publish
+  2 CTW Asscher Cut Lab-Grown Diamond Solitaire Neckla publish
+  1.16 CTW Oval Cut Lab-Grown Diamond Halo Pendant Nec publish
+  2 CTW Emerald Cut Lab-Grown Diamond Solitaire Pendan publish
+  2.16 CTW Emerald Cut Lab-Grown Diamond Two Stone Pen publish
+  7.62 CTW Round & Emerald Cut Lab-Grown Diamond Toi e publish
+  1.11 CTW Oval Cut Lab-Grown Diamond Cross Pendant Ne publish
+  1.35 CTW Emerald Cut Lab-Grown Diamond Halo Pendant  publish
+  1.41 CTW Oval Cut Lab-Grown Diamond Halo Pendant Nec publish
+  2 CTW Pear & Emerald Cut Lab-Grown Diamond Toi et Mo publish
+  1.16 CTW Emerald Cut Lab-Grown Diamond Halo Pendant  publish
+  1.17 CTW Heart Cut Lab-Grown Diamond Halo Pendant Ne publish
+  1.2 CTW Marquise Cut Lab-Grown Diamond Halo Pendant  publish
+  1.09 CTW Oval Cut Lab-Grown Diamond Station Necklace publish
+  1.09 CTW Emerald Cut Lab-Grown Diamond Station Neckl publish
+  0.5 CTW Round Brilliant Lab-Grown Diamond Bezel Soli publish
+  0.5 CTW Round Brilliant Lab-Grown Diamond Bezel Pend publish
+  1.19 CTW Pear Cut Lab-Grown Diamond Halo Pendant Nec publish
+  1.17 CTW Round Brilliant Lab-Grown Diamond Halo Pend publish
+  Engraved Initial Tag Pendant Necklace                publish
+  0.25 CTW Initial & Round Brilliant Lab-Grown Diamond publish
+  4 CTW Oval, Emerald & Pear Cut Lab-Grown Diamond Clu publish
+  0.68 CTW Multi-Cut Lab-Grown Diamond Bar Necklace    publish
+  1.43 CTW Marquise Cut Lab-Grown Diamond Halo Station publish
+  2.24 CTW Pear Cut Lab-Grown Diamond Graduated Smile  publish
+  3 CTW Heart Cut Lab-Grown Diamond Clover Pendant Nec publish
+  0.48 CTW Pear Cut Green Gemstone & Lab-Grown Diamond publish
+  0.5 CTW Pear Cut Lab-Grown Diamond Key Pendant Neckl publish
+  0.18 CTW Marquise Cut Blue Gemstone Evil Eye Heart P publish
+  2.04 CTW Round Brilliant Lab-Grown Diamond Cross Pen publish
+  1.9 CTW Round Brilliant Lab-Grown Diamond Solitaire  publish
+  3 CTW Marquise Cut Lab-Grown Diamond Bezel Pendant N publish
+  0.44 CTW Pear & Round Cut Lab-Grown Diamond Cross Pe publish
+  4 CTW Pear Cut Lab-Grown Diamond Star Pendant Neckla publish
+  9 CTW Marquise Cut Lab-Grown Diamond Bezel Tennis Br publish
+  Round Brilliant Lab-Grown Diamond Station Bracelet   publish
+  1.07 CTW Round Brilliant Lab-Grown Diamond Micro Pav publish
+  7.4 CTW Mixed Cut Lab-Grown Diamond Tennis Bracelet  publish
+  Pink & White Lab-Grown Diamond Flower Station Bracel publish
+  Blue & White Lab-Grown Diamond Tennis Bracelet       publish
+  Round Brilliant Lab-Grown Diamond Solitaire Chain Br publish
+✓ 11.2 CTW Emerald Cut Lab-Grown Diamond Tennis Bracelet
+✓ 23 CTW Round Brilliant Lab-Grown Diamond Tennis Necklace
+✓ 3.06 CTW Round Brilliant Lab-Grown Diamond Tennis Bracelet
+✓ 33 CTW Round Brilliant Lab-Grown Diamond Tennis Necklace
+✓ 20 CTW Pear Cut Lab-Grown Diamond Tennis Bracelet
+✓ 1 CTW Oval Cut Lab-Grown Diamond Solitaire Bracelet
+✓ 1 CTW Pear Cut Lab-Grown Diamond Solitaire Bracelet
+✓ 5.93 CTW Baguette & Round Cut Lab-Grown Diamond Bracelet
+✓ 1 CTW Emerald Cut Lab-Grown Diamond Solitaire Bracelet
+✓ 18 CTW Mixed Cut Lab-Grown Diamond Statement Bracelet
+✓ 1 CTW Marquise Cut Lab-Grown Diamond Solitaire Bracelet
+✓ 15 CTW Mixed Cut Lab-Grown Diamond Bracelet
+✓ 19.5 CTW Emerald Cut Lab-Grown Diamond Tennis Bracelet
+✓ 9.9 CTW Pear Cut Lab-Grown Diamond Tennis Bracelet
+✓ 1.05 CTW Round Brilliant Lab-Grown Diamond Cuban Link Bracel
+✓ 6 CTW Oval Cut Lab-Grown Diamond Tennis Bracelet
+✓ 14 CTW Marquise & Pear Cut Lab-Grown Diamond Cluster Necklac
+✓ 15.34 CTW Pear Cut Lab-Grown Diamond Fringe Necklace
+✓ 2 CTW Round Brilliant Lab-Grown Diamond Solitaire Necklace
+✓ 2 CTW Heart Cut Lab-Grown Diamond Solitaire Necklace
+✓ 35.4 CTW Marquise Cut Lab-Grown Diamond Statement Necklace
+✓ 2.36 CTW Mixed Cut Lab-Grown Diamond Pendant
+✓ 4.2 CTW Emerald Cut Lab-Grown Diamond Huggie Hoop Earrings
+✓ 3 CTW Round Brilliant Lab-Grown Diamond Stud Earrings
+✓ 3 CTW Princess Cut Lab-Grown Diamond Stud Earrings
+✓ 3 CTW Marquise Cut Lab-Grown Diamond Stud Earrings
+✓ 2.3 CTW Heart Cut Lab-Grown Diamond Halo Stud Earrings
+✓ 4 CTW Pear & Emerald Cut Lab-Grown Diamond Toi et Moi Stud E
+✓ 2 CTW Asscher Cut Lab-Grown Diamond Stud Earrings
+✓ 0.51 CTW Pavé Lab-Grown Diamond Huggie Hoop Earrings
+✓ 0.2 CTW Round Brilliant Lab-Grown Diamond Solitaire Huggie H
+✓ 1 CTW Pear Cut Lab-Grown Diamond Two-Stone Stud Earrings
+✓ 2 CTW Marquise Cut Lab-Grown Diamond Station Necklace
+✓ 2 CTW Oval Cut Lab-Grown Diamond Solitaire Engagement Ring
+✓ 1.94 CTW Pear Cut Lab-Grown Diamond Cluster Engagement Ring
+✓ 2.3 CTW Round Brilliant Lab-Grown Diamond Full Eternity Ring
+✓ 2.27 CTW Cushion Cut Lab-Grown Diamond Twist Engagement Ring
+✓ 2.29 CTW Pear Cut Lab-Grown Diamond Twist Engagement Ring
+✓ Twisted Rope Lab-Grown Diamond Band Ring
+✓ 2.2 CTW Heart Cut Lab-Grown Diamond Three Stone Engagement R
+✓ 2.09 CTW Asscher Cut Lab-Grown Diamond Twist Engagement Ring
+✓ 3.27 CTW Emerald Cut Lab-Grown Diamond Pavé Engagement Ring
+✓ 2 CTW Round Brilliant Lab-Grown Diamond Adjustable Bolo Brac
+✓ 4 CTW Round Brilliant Lab-Grown Diamond Tennis Bracelet
+✓ 2 CTW Round Brilliant Lab-Grown Diamond Tennis Bracelet
+✓ 0.67 CTW Emerald Cut Lab-Grown Diamond Cuban Link Bracelet
+✓ 0.75 CTW Oval Cut Lab-Grown Diamond Cuban Link Bracelet
+✓ 0.75 CTW Marquise Cut Lab-Grown Diamond Cuban Link Bracelet
+✓ Marquise Cut Lab-Grown Diamond Three Stone Engagement Ring
+✓ 0.5 CTW Round Brilliant Lab-Grown Diamond Infinity Pendant N
+✓ 1 CTW Emerald & Pear Cut Lab-Grown Diamond Toi et Moi Pendan
+✓ 2 CTW Pear & Radiant Cut Lab-Grown Diamond Toi et Moi Pendan
+✓ 5.46 CTW Emerald Cut Lab-Grown Diamond Pendant Necklace
+✓ 1 CTW Asscher Cut Lab-Grown Diamond Solitaire Pendant Neckla
+✓ 1.27 CTW Round Brilliant Lab-Grown Diamond Three Stone Engag
+✓ Round Brilliant Lab-Grown Diamond Milgrain Wave Band Ring
+✓ 2.25 CTW Cushion Cut Lab-Grown Diamond Halo Engagement Ring
+✓ 2.52 CTW Pear Cut Lab-Grown Diamond Solitaire Engagement Rin
+✓ 1.12 CTW Round Brilliant Lab-Grown Diamond Double Row Band R
+✓ 2 CTW Asscher Cut Lab-Grown Diamond Solitaire Necklace
+✓ 1.16 CTW Oval Cut Lab-Grown Diamond Halo Pendant Necklace
+✓ 2 CTW Emerald Cut Lab-Grown Diamond Solitaire Pendant Neckla
+✓ 2.16 CTW Emerald Cut Lab-Grown Diamond Two Stone Pendant Nec
+✓ 7.62 CTW Round & Emerald Cut Lab-Grown Diamond Toi et Moi Pe
+✓ 1.11 CTW Oval Cut Lab-Grown Diamond Cross Pendant Necklace
+✓ 1.35 CTW Emerald Cut Lab-Grown Diamond Halo Pendant Necklace
+✓ 1.41 CTW Oval Cut Lab-Grown Diamond Halo Pendant Necklace
+✓ 2 CTW Pear & Emerald Cut Lab-Grown Diamond Toi et Moi Pendan
+✓ 1.16 CTW Emerald Cut Lab-Grown Diamond Halo Pendant Necklace
+✓ 1.17 CTW Heart Cut Lab-Grown Diamond Halo Pendant Necklace
+✓ 1.2 CTW Marquise Cut Lab-Grown Diamond Halo Pendant Necklace
+✓ 1.09 CTW Oval Cut Lab-Grown Diamond Station Necklace
+✓ 1.09 CTW Emerald Cut Lab-Grown Diamond Station Necklace
+✓ 0.5 CTW Round Brilliant Lab-Grown Diamond Bezel Solitaire Ne
+✓ 0.5 CTW Round Brilliant Lab-Grown Diamond Bezel Pendant Neck
+✓ 1.19 CTW Pear Cut Lab-Grown Diamond Halo Pendant Necklace
+✓ 1.17 CTW Round Brilliant Lab-Grown Diamond Halo Pendant Neck
+✓ Engraved Initial Tag Pendant Necklace
+✓ 0.25 CTW Initial & Round Brilliant Lab-Grown Diamond Station
+✓ 4 CTW Oval, Emerald & Pear Cut Lab-Grown Diamond Cluster Nec
+✓ 0.68 CTW Multi-Cut Lab-Grown Diamond Bar Necklace
+✓ 1.43 CTW Marquise Cut Lab-Grown Diamond Halo Station Necklac
+✓ 2.24 CTW Pear Cut Lab-Grown Diamond Graduated Smile Necklace
+✓ 3 CTW Heart Cut Lab-Grown Diamond Clover Pendant Necklace
+✓ 0.48 CTW Pear Cut Green Gemstone & Lab-Grown Diamond Toi et 
+✓ 0.5 CTW Pear Cut Lab-Grown Diamond Key Pendant Necklace
+✓ 0.18 CTW Marquise Cut Blue Gemstone Evil Eye Heart Pendant N
+✓ 2.04 CTW Round Brilliant Lab-Grown Diamond Cross Pendant Nec
+✓ 1.9 CTW Round Brilliant Lab-Grown Diamond Solitaire Pendant 
+✓ 3 CTW Marquise Cut Lab-Grown Diamond Bezel Pendant Necklace
+✓ 0.44 CTW Pear & Round Cut Lab-Grown Diamond Cross Pendant Ne
+✓ 4 CTW Pear Cut Lab-Grown Diamond Star Pendant Necklace
+✓ 9 CTW Marquise Cut Lab-Grown Diamond Bezel Tennis Bracelet
+✓ Round Brilliant Lab-Grown Diamond Station Bracelet
+✓ 1.07 CTW Round Brilliant Lab-Grown Diamond Micro Pavé Tennis
+✓ 7.4 CTW Mixed Cut Lab-Grown Diamond Tennis Bracelet
+✓ Pink & White Lab-Grown Diamond Flower Station Bracelet
+✓ Blue & White Lab-Grown Diamond Tennis Bracelet
+✓ Round Brilliant Lab-Grown Diamond Solitaire Chain Bracelet
+
+99 published to Online Store.
+
+exit=0
+
+=== --verify ===
+
+Store     0cz13u-ch.myshopify.com
+Shop      ChainandBracelet (0cz13u-ch.myshopify.com) — connected
+Products  reading your store…Products  101 already in the store            
+Render    /Users/ankitagupta/Google Drive/My Drive/Asimi/C&B/Render + ./_test-renders — 48 items, 766 files
+          + 53 product(s) with copy but no render folder (managed, nothing to upload)
+Sheet     ./packing-list.csv — 22 items parsed
+Prices    ./price-list.csv — 115 items in USD
+Video     included
+Mode      DRY RUN — nothing will be created
+
+  ⚠ AJNT65: price-list.csv says BRACELET, the code says NECKLACE — using NECKLACE. Fix the sheet if that's wrong.
+Checked 101 product(s) against Drive, price-list.csv and product-content.json.
+
+  ✓ 90 with nothing wrong
+  ✖ 11 with something to fix
+
+── BY PROBLEM ──
+
+    9  no spec list
+       AJER772 AJLB143 AJLB144 AJLB220 AJLB228 AJLR274 AJPD262 AJPD295 BR24435
+    2  no price in price-list.csv
+       AJLB96 BR24435
+    2  old "Diamond Details" section still present
+       AJLB143 AJLB144
+    1  N variant(s) missing
+       AJNT26
+    1  status DRAFT
+       BR24435
+    1  not on the Online Store
+       BR24435
+
+── BY PRODUCT ──
+
+  AJER772     0.51 CTW Pavé Lab-Grown Diamond Huggie Hoop Ea
+       no spec list
+  AJLB96      Round Brilliant Lab-Grown Diamond Pavé Bangle 
+       no price in price-list.csv
+  AJLB143     18 CTW Mixed Cut Lab-Grown Diamond Statement B
+       no spec list
+       old "Diamond Details" section still present
+  AJLB144     15 CTW Mixed Cut Lab-Grown Diamond Bracelet
+       no spec list
+       old "Diamond Details" section still present
+  AJLB220     Pink & White Lab-Grown Diamond Flower Station 
+       no spec list
+  AJLB228     Blue & White Lab-Grown Diamond Tennis Bracelet
+       no spec list
+  AJLR274     Twisted Rope Lab-Grown Diamond Band Ring
+       no spec list
+  AJNT26      33 CTW Round Brilliant Lab-Grown Diamond Tenni
+       50 variant(s) missing: 925 Sterling Silver 16 in, 925 Sterling Silver 17 in, 925 Sterling Silver 18 in…
+  AJPD262     Engraved Initial Tag Pendant Necklace
+       no spec list
+  AJPD295     0.68 CTW Multi-Cut Lab-Grown Diamond Bar Neckl
+       no spec list
+  BR24435     Multi-Gemstone Station Bracelet in Gold
+       no price in price-list.csv
+       no spec list
+       status DRAFT
+       not on the Online Store
+
+Written to verify-2026-10-01-15-30-09.csv
+
+exit=0
+

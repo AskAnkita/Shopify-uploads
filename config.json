@@ -1,0 +1,248 @@
+{
+  "store": "0cz13u-ch.myshopify.com",
+  "apiVersion": "2026-07",
+  "sheetCsv": "./packing-list.csv",
+  "imagesDir": "/Users/ankitagupta/Google Drive/My Drive/Asimi/C&B/Render",
+  "contentFile": "./product-content.json",
+  "colours": [
+    {
+      "code": "Y",
+      "label": "Yellow",
+      "altText": "#Jewelry material_Gold"
+    },
+    {
+      "code": "W",
+      "label": "White",
+      "altText": "#Jewelry material_white_gold"
+    },
+    {
+      "code": "R",
+      "label": "Rose",
+      "altText": "#Jewelry material_Rose gold"
+    }
+  ],
+  "metals": [
+    {
+      "sheetCodes": [
+        "S925"
+      ],
+      "key": "S925"
+    },
+    {
+      "sheetCodes": [
+        "G10K"
+      ],
+      "key": "G10K"
+    },
+    {
+      "sheetCodes": [
+        "G14K"
+      ],
+      "key": "G14K"
+    },
+    {
+      "sheetCodes": [
+        "G18K"
+      ],
+      "key": "G18K"
+    }
+  ],
+  "columnIndex": {
+    "sr": 1,
+    "itemNo": 2,
+    "design": 3,
+    "code": 4,
+    "metalGrossWt": 5,
+    "metalNetWt": 6,
+    "metalRate": 7,
+    "metalAmt": 8,
+    "diamondCode": 9,
+    "diamondSize": 10,
+    "diamondPcs": 11,
+    "diamondWt": 12,
+    "diamondRate": 13,
+    "diamondAmt": 14,
+    "makingRate": 15,
+    "makingAmt": 16,
+    "totalUsd": 17
+  },
+  "defaults": {
+    "vendor": "ChainandBracelet",
+    "productType": "Jewellery",
+    "status": "DRAFT",
+    "tags": [],
+    "trackInventory": false,
+    "locationId": null,
+    "tagItemCode": false,
+    "allowMissingPrice": false,
+    "placeholderPrice": "0.00",
+    "missingPriceTag": "needs-price",
+    "setSku": true,
+    "untitledTitle": "Untitled — description needed",
+    "alwaysCollections": []
+  },
+  "media": {
+    "uploadVideos": true,
+    "maxImagesPerColour": 10,
+    "maxVideosPerColour": 2,
+    "altSuffix": false
+  },
+  "categories": {
+    "AJNT": "Necklaces",
+    "AJLB": "Bracelets",
+    "AJPD": "Charms & Pendants",
+    "AJER": "Earrings",
+    "AJLR": "Rings",
+    "BR": "Bracelets"
+  },
+  "optionName": "Jewelry material",
+  "materials": [
+    {
+      "label": "925 Sterling Silver",
+      "metal": "S925",
+      "colour": "W"
+    },
+    {
+      "label": "10k Yellow Gold",
+      "metal": "G10K",
+      "colour": "Y"
+    },
+    {
+      "label": "10k White Gold",
+      "metal": "G10K",
+      "colour": "W"
+    },
+    {
+      "label": "10k Rose Gold",
+      "metal": "G10K",
+      "colour": "R"
+    },
+    {
+      "label": "14k Yellow Gold",
+      "metal": "G14K",
+      "colour": "Y"
+    },
+    {
+      "label": "14k White Gold",
+      "metal": "G14K",
+      "colour": "W"
+    },
+    {
+      "label": "14k Rose Gold",
+      "metal": "G14K",
+      "colour": "R"
+    },
+    {
+      "label": "18k Yellow Gold",
+      "metal": "G18K",
+      "colour": "Y"
+    },
+    {
+      "label": "18k White Gold",
+      "metal": "G18K",
+      "colour": "W"
+    },
+    {
+      "label": "18k Rose Gold",
+      "metal": "G18K",
+      "colour": "R"
+    }
+  ],
+  "describe": {
+    "model": "claude-sonnet-4-5"
+  },
+  "priceListCsv": "./price-list.csv",
+  "priceList": {
+    "currency": "USD"
+  },
+  "collections": {
+    "AJER": [
+      "Earrings"
+    ],
+    "AJLR": [
+      "Rings"
+    ],
+    "AJLB": [
+      "Bracelets"
+    ],
+    "AJNT": [
+      "Necklaces"
+    ],
+    "AJPD": [
+      "Necklaces"
+    ],
+    "BR": [
+      "Bracelets"
+    ]
+  },
+  "facets": {
+    "asTags": true,
+    "asMetafields": true,
+    "namespace": "custom",
+    "tagPrefixes": {
+      "shape": "Shape",
+      "type": "Type",
+      "style": "Style"
+    },
+    "metafieldKeys": {
+      "shape": "stone_shape",
+      "type": "jewellery_type",
+      "style": "setting_style"
+    }
+  },
+  "publishTo": [
+    "Online Store"
+  ],
+  "ignorePrefixes": [
+    "BR"
+  ],
+  "specDefaults": {
+    "color": "E-F",
+    "clarity": "VVS-VS",
+    "metal": "925 Sterling Silver, 10K, 14K & 18K Gold"
+  },
+  "showMetalWeight": "multi",
+  "shapeMetafield": {
+    "namespace": "shopify",
+    "key": "stone-shape"
+  },
+  "extraImagesDirs": [
+    "./_test-renders"
+  ],
+  "includeCodes": [
+    "BR24435"
+  ],
+  "chainLength": {
+    "AJPD": "18 inch"
+  },
+  "specHeading": "",
+  "lengthOption": "Length",
+  "lengths": {
+    "NECKLACE": [
+      "16 in",
+      "17 in",
+      "18 in",
+      "20 in",
+      "22 in"
+    ],
+    "BRACELET": [
+      "6.5 in",
+      "7 in",
+      "7.5 in",
+      "8 in"
+    ]
+  },
+  "lengthBase": {
+    "NECKLACE": "18 in",
+    "BRACELET": "7 in"
+  },
+  "lengthPricesCsv": "./length-prices.csv",
+  "noLengthCodes": [],
+  "lengthPricePerInch": 25,
+  "materialAliases": {
+    "gold": "18k Yellow Gold",
+    "yellow gold": "18k Yellow Gold",
+    "white gold": "18k White Gold",
+    "rose gold": "18k Rose Gold"
+  }
+}

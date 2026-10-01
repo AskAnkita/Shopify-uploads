@@ -1,0 +1,209 @@
+=== --sync-content --live ===
+
+Store     0cz13u-ch.myshopify.com
+Shop      ChainandBracelet (0cz13u-ch.myshopify.com) — connected
+Products  reading your store…Products  101 already in the store            
+Render    /Users/ankitagupta/Google Drive/My Drive/Asimi/C&B/Render + ./_test-renders — 48 items, 766 files
+          + 53 product(s) with copy but no render folder (managed, nothing to upload)
+Sheet     ./packing-list.csv — 22 items parsed
+Prices    ./price-list.csv — 115 items in USD
+Video     included
+Mode      LIVE
+
+✓ BR24435      description only     Multi-Gemstone Station Bracelet in Gold
+
+1 updated, 100 already fine (use --force to rewrite).
+
+exit=0
+
+=== --sync-prices --force --live ===
+
+Store     0cz13u-ch.myshopify.com
+Shop      ChainandBracelet (0cz13u-ch.myshopify.com) — connected
+Products  reading your store…Products  101 already in the store            
+Render    /Users/ankitagupta/Google Drive/My Drive/Asimi/C&B/Render + ./_test-renders — 48 items, 766 files
+          + 53 product(s) with copy but no render folder (managed, nothing to upload)
+Sheet     ./packing-list.csv — 22 items parsed
+Prices    ./price-list.csv — 115 items in USD
+Video     included
+Mode      LIVE
+
+✓ AJER666      10 variant price(s) set
+✓ AJER668      10 variant price(s) set
+✓ AJER680      10 variant price(s) set
+✓ AJER723      10 variant price(s) set
+✓ AJER758      10 variant price(s) set
+✓ AJER759      10 variant price(s) set
+✓ AJER772      10 variant price(s) set
+✓ AJER778      10 variant price(s) set
+✓ AJER826      10 variant price(s) set
+✓ AJER827      10 variant price(s) set
+✓ AJLB20       40 variant price(s) set
+✓ AJLB26       30 variant price(s) set
+✓ AJLB51       30 variant price(s) set
+✓ AJLB52       30 variant price(s) set
+✓ AJLB53       30 variant price(s) set
+✓ AJLB54       30 variant price(s) set
+✓ AJLB68       40 variant price(s) set
+✓ AJLB110      40 variant price(s) set
+✓ AJLB118      40 variant price(s) set
+✓ AJLB130      30 variant price(s) set
+✓ AJLB143      30 variant price(s) set
+✓ AJLB144      30 variant price(s) set
+✓ AJLB152      30 variant price(s) set
+✓ AJLB157      30 variant price(s) set
+✓ AJLB160      30 variant price(s) set
+✓ AJLB161      30 variant price(s) set
+✓ AJLB167      30 variant price(s) set
+✓ AJLB185      28 variant price(s) set
+✓ AJLB187      40 variant price(s) set
+✓ AJLB200      40 variant price(s) set
+✓ AJLB206      40 variant price(s) set
+✓ AJLB220      40 variant price(s) set
+✓ AJLB221      40 variant price(s) set
+✓ AJLB222      40 variant price(s) set
+✓ AJLB223      40 variant price(s) set
+✓ AJLB228      40 variant price(s) set
+✓ AJLB236      40 variant price(s) set
+✓ AJLR211      10 variant price(s) set
+✓ AJLR255      10 variant price(s) set
+✓ AJLR257      10 variant price(s) set
+✓ AJLR262      10 variant price(s) set
+✓ AJLR272      10 variant price(s) set
+✓ AJLR274      10 variant price(s) set
+✓ AJLR299      10 variant price(s) set
+✓ AJLR307      10 variant price(s) set
+✓ AJLR379      10 variant price(s) set
+✓ AJLR389      10 variant price(s) set
+✓ AJLR416      10 variant price(s) set
+✓ AJLR511      10 variant price(s) set
+✓ AJLR559      10 variant price(s) set
+✓ AJLR602      10 variant price(s) set
+? AJNT26       couldn't match 15 variant(s) to a material
+               first variant: sku=(none)  options: Jewelry material=White gold | Length=16 in
+
+51 products repriced, 48 already correct.
+No price anywhere for: AJLB96, BR24435
+
+exit=0
+
+=== --sync-lengths --force --live ===
+
+Store     0cz13u-ch.myshopify.com
+Shop      ChainandBracelet (0cz13u-ch.myshopify.com) — connected
+Products  reading your store…Products  101 already in the store            
+Render    /Users/ankitagupta/Google Drive/My Drive/Asimi/C&B/Render + ./_test-renders — 48 items, 766 files
+          + 53 product(s) with copy but no render folder (managed, nothing to upload)
+Sheet     ./packing-list.csv — 22 items parsed
+Prices    ./price-list.csv — 115 items in USD
+Video     included
+Mode      LIVE
+
+· AJLB20      bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB20      40 variants, 30 priced
+· AJLB26      bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB26      40 variants, 30 priced
+· AJLB51      bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB51      40 variants, 30 priced
+· AJLB52      bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB52      40 variants, 30 priced
+· AJLB53      bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB53      40 variants, 30 priced
+· AJLB54      bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB54      40 variants, 30 priced
+· AJLB68      bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB68      40 variants, 30 priced
+· AJLB96      bracelet  10 metals x 4 lengths = 40 variants
+⚠ AJLB96      no price in ./price-list.csv — every length left at 0
+✓ AJLB96      40 variants, 40 priced
+· AJLB110     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB110     40 variants, 30 priced
+· AJLB118     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB118     40 variants, 30 priced
+· AJLB130     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB130     40 variants, 30 priced
+· AJLB143     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB143     40 variants, 30 priced
+· AJLB144     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB144     40 variants, 30 priced
+· AJLB152     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB152     40 variants, 30 priced
+· AJLB157     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB157     40 variants, 30 priced
+· AJLB160     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB160     40 variants, 30 priced
+· AJLB161     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB161     40 variants, 30 priced
+· AJLB167     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB167     40 variants, 30 priced
+· AJLB185     bracelet  7 metals x 4 lengths = 28 variants
+✓ AJLB185     28 variants, 21 priced
+· AJLB187     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB187     40 variants, 30 priced
+· AJLB200     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB200     40 variants, 30 priced
+· AJLB206     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB206     40 variants, 30 priced
+· AJLB220     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB220     40 variants, 30 priced
+· AJLB221     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB221     40 variants, 30 priced
+· AJLB222     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB222     40 variants, 30 priced
+· AJLB223     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB223     40 variants, 30 priced
+· AJLB228     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB228     40 variants, 30 priced
+· AJLB236     bracelet  10 metals x 4 lengths = 40 variants
+✓ AJLB236     40 variants, 30 priced
+· AJNT26      necklace  3 metals x 5 lengths = 15 variants
+✓ AJNT26      15 variants, 0 priced
+· AJNT27      necklace  10 metals x 5 lengths = 50 variants
+✓ AJNT27      50 variants, 40 priced
+· AJNT37      necklace  10 metals x 5 lengths = 50 variants
+✓ AJNT37      50 variants, 40 priced
+· AJNT46      necklace  10 metals x 5 lengths = 50 variants
+✓ AJNT46      50 variants, 40 priced
+· AJNT59      necklace  10 metals x 5 lengths = 50 variants
+✓ AJNT59      50 variants, 40 priced
+· AJNT60      necklace  10 metals x 5 lengths = 50 variants
+✓ AJNT60      50 variants, 40 priced
+· AJNT61      necklace  10 metals x 5 lengths = 50 variants
+✓ AJNT61      50 variants, 40 priced
+· AJNT62      necklace  10 metals x 5 lengths = 50 variants
+✓ AJNT62      50 variants, 40 priced
+· AJNT63      necklace  10 metals x 5 lengths = 50 variants
+✓ AJNT63      50 variants, 40 priced
+· AJNT64      necklace  10 metals x 5 lengths = 50 variants
+✓ AJNT64      50 variants, 40 priced
+· AJNT65      necklace  10 metals x 5 lengths = 50 variants
+✓ AJNT65      50 variants, 40 priced
+· AJNT68      necklace  10 metals x 5 lengths = 50 variants
+✓ AJNT68      50 variants, 40 priced
+· AJPD78      necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD78      50 variants, 40 priced
+· AJPD201     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD201     50 variants, 40 priced
+· AJPD202     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD202     50 variants, 40 priced
+· AJPD203     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD203     50 variants, 40 priced
+· AJPD236     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD236     50 variants, 40 priced
+· AJPD243     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD243     50 variants, 40 priced
+· AJPD262     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD262     50 variants, 40 priced
+· AJPD263     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD263     50 variants, 40 priced
+· AJPD278     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD278     50 variants, 40 priced
+· AJPD279     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD279     50 variants, 40 priced
+· AJPD294     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD294     50 variants, 40 priced
+· AJPD295     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD295     50 variants, 40 priced
+· AJPD301     necklace  10 metals x 5 lengths = 50 variants
+✓ AJPD301     50 variants, 40 priced
+· AJPD352     necklace  10 metals x 5 lengths = 50 variants
