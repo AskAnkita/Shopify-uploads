@@ -153,7 +153,8 @@
   },
   "priceListCsv": "./price-list.csv",
   "priceList": {
-    "currency": "USD"
+    "currency": "USD",
+    "roundDownTo": 10
   },
   "collections": {
     "AJER": [

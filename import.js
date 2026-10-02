@@ -197,6 +197,14 @@ const num = (v) => {
   return n === '' || isNaN(Number(n)) ? null : Number(n);
 };
 const money = (v) => { const n = num(v); return n === null ? null : n.toFixed(2); };
+// Selling prices go down to a round step when config.json sets "priceList.roundDownTo"
+// (10 turns 1222 into 1220 and 1238 into 1230). Unset or 0 leaves prices exact.
+const roundPrice = (n) => {
+  const step = Number(cfg.priceList?.roundDownTo);
+  if (!(step > 0) || n < step) return n; // never round a real price down to 0
+  return Math.floor(n / step + 1e-9) * step;
+};
+const priceMoney = (v) => { const n = num(v); return n === null ? null : roundPrice(n).toFixed(2); };
 const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const rxEsc = (s) => String(s).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
@@ -270,7 +278,7 @@ function parseSheet(rows) {
         diamondSize: row[C.diamondSize] || '',
         diamondPcs: num(row[C.diamondPcs]),
         diamondCts: num(row[C.diamondWt]),
-        price: money(row[C.totalUsd]),
+        price: priceMoney(row[C.totalUsd]),
       });
       continue;
     }
@@ -366,7 +374,7 @@ function parsePriceList(file) {
     if (!code) continue;
     const prices = {};
     for (const [metal, i] of Object.entries(cols)) {
-      const v = money(r[i]);
+      const v = priceMoney(r[i]);
       if (v !== null) prices[metal] = v;
     }
     if (!Object.keys(prices).length) continue;
@@ -2006,7 +2014,7 @@ async function main() {
           const variants = [];
           for (const { m, len } of wanted) {
             const price = len && Number(m.price) > 0
-              ? Math.max(0, Number(m.price) + lengthDeltaFor(cat, len)).toFixed(2)
+              ? roundPrice(Math.max(0, Number(m.price) + lengthDeltaFor(cat, len))).toFixed(2)
               : m.price;
             variants.push({
               optionValues: [
@@ -3021,7 +3029,7 @@ async function main() {
           const v = actual.get(`${metal}||${len || ''}`);
           if (!v) { missing.push(`${metal}${len ? ' ' + len : ''}`); continue; }
           const b = basePrice.get(metal) ?? 0;
-          const want = b > 0 ? Math.max(0, b + (len ? lengthDeltaFor(cat, len) : 0)) : 0;
+          const want = b > 0 ? roundPrice(Math.max(0, b + (len ? lengthDeltaFor(cat, len) : 0))) : 0;
           const got = Number(v.price);
           if (got === 0 && want > 0) zero.push(`${metal}${len ? ' ' + len : ''}`);
           else if (Math.abs(got - want) > 0.01) badPrice.push(`${metal}${len ? ' ' + len : ''}: ${got} want ${want.toFixed(2)}`);
@@ -3428,7 +3436,7 @@ async function main() {
           // A product with no price yet must stay at 0. Adding a length surcharge to a
           // zero base invents a price out of nothing — a bracelet with no cost data was
           // ending up on sale at the surcharge alone.
-          const price = b > 0 ? Math.max(0, b + d).toFixed(2) : '0.00';
+          const price = b > 0 ? roundPrice(Math.max(0, b + d)).toFixed(2) : '0.00';
           if (price !== Number(v.price).toFixed(2)) updates.push({ id: v.id, price });
         }
         for (let i = 0; i < updates.length; i += 100) {
