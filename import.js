@@ -2036,19 +2036,45 @@ async function main() {
           continue;
         }
         try {
+          // A metal option linked to a metafield (Shopify's "Jewelry material" category
+          // option) takes the metaobject entry's handle, not a name. Sending a name failed
+          // with "Cannot set name for an option value linked to a metafield", which is why
+          // AJNT26 kept only the three values it was built with by hand.
+          const d0 = await gql(
+            `query($id: ID!) { product(id: $id) { options { name linkedMetafield { key } } } }`,
+            { id: p.id }
+          );
+          const linked = (d0.product?.options || []).find((o) => o.name === cfg.optionName)?.linkedMetafield;
+          let handleFor = null;
+          if (linked) {
+            const map = new Map();
+            for (const n of await metaobjectEntries(`shopify--${linked.key}`)) {
+              map.set(String(n.displayName || n.handle).trim().toLowerCase(), n.handle);
+            }
+            handleFor = (label) => map.get(String(label).trim().toLowerCase()) || null;
+            const none = [...new Set(wanted.map((w) => w.m.label))].filter((l) => !handleFor(l));
+            if (none.length) {
+              console.log(`✖ ${code.padEnd(12)} "${cfg.optionName}" is linked to a metafield with no entry for: ${none.join(', ')} — add them in Shopify first`);
+              continue;
+            }
+          }
+          const lenTag = (x) => String(x).replace(/\s+/g, '').replace(/in$/i, '').toUpperCase() + 'IN';
           const variants = [];
           for (const { m, len } of wanted) {
             const price = len && Number(m.price) > 0
               ? roundPrice(Math.max(0, Number(m.price) + lengthDeltaFor(cat, len))).toFixed(2)
               : m.price;
+            const sku = `${code}-${m.metal}-${m.colour}${len && cfg.skuIncludesLength ? `-${lenTag(len)}` : ''}`;
             variants.push({
               optionValues: [
-                { optionName: cfg.optionName, name: m.label },
+                handleFor
+                  ? { optionName: cfg.optionName, linkedMetafieldValue: handleFor(m.label) }
+                  : { optionName: cfg.optionName, name: m.label },
                 ...(len ? [{ optionName: lenOpt.name, name: len }] : []),
               ],
               price,
               inventoryItem: {
-                ...(cfg.defaults.setSku ? { sku: `${code}-${m.metal}-${m.colour}` } : {}),
+                ...(cfg.defaults.setSku ? { sku } : {}),
                 tracked: !!cfg.defaults.trackInventory,
               },
             });
