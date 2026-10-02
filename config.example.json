@@ -151,6 +151,15 @@
     "model": "claude-sonnet-4-5"
   },
   "priceListCsv": "./price-list.csv",
+  "bangles": {
+    "codes": ["AJLB96"],
+    "optionName": "Size",
+    "sizes": [
+      { "label": "Small (2.24 in)", "sku": "S", "surchargePct": 0 },
+      { "label": "Medium (2.36 in)", "sku": "M", "surchargePct": 5 },
+      { "label": "Large (2.48 in)", "sku": "L", "surchargePct": 10 }
+    ]
+  },
   "priceList": {
     "currency": "USD",
     "roundDownTo": 10
