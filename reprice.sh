@@ -16,5 +16,6 @@ run() {
 }
 run --sync-prices --force --live
 run --sync-lengths --force --live
+run --sync-bangles --live
 run --verify
 echo "Done. Log: $LOG"

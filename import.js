@@ -60,6 +60,7 @@ const VERIFY = flag('--verify');
 const SYNC_SKUS = flag('--sync-skus');
 const SYNC_VARIANT_IMAGES = flag('--sync-variant-images');
 const SYNC_LENGTHS = flag('--sync-lengths');
+const SYNC_BANGLES = flag('--sync-bangles');
 const SET_STATUS = value('--set-status') || null;
 const HARVEST_SPECS = flag('--harvest-specs');
 const LINKED_VALUES = flag('--linked-values');
@@ -888,6 +889,30 @@ function lengthDeltaFor(cat, len) {
   const a = num(len), b = num(base);
   if (a == null || b == null) return 0;
   return (a - b) * rate;
+}
+
+/**
+ * The config.json "bangles" settings when this code is a bangle, otherwise null. A bangle
+ * is rigid and sized by inside diameter, so it gets its own Size option instead of the
+ * bracelet chain lengths.
+ */
+function bangleFor(code) {
+  const b = cfg.bangles;
+  if (!b || !Array.isArray(b.sizes) || !b.sizes.length) return null;
+  const c = String(code).toUpperCase();
+  return (b.codes || []).some((x) => String(x).toUpperCase() === c) ? b : null;
+}
+
+/** One bangle size's price: the metal's base price plus that size's percentage, rounded like every other price. */
+function banglePrice(base, size) {
+  return roundPrice(base * (1 + (Number(size.surchargePct) || 0) / 100));
+}
+
+/** A variant's value for one option, from the index's "Material=… | Size=…" string. */
+function variantOption(v, name) {
+  const raw = String(v.options || '').split(' | ')
+    .find((x) => x.split('=')[0].trim().toLowerCase() === String(name).trim().toLowerCase());
+  return raw ? raw.slice(raw.indexOf('=') + 1).trim() : '';
 }
 
 function specsHtml(code, title, existingHtml) {
@@ -2779,8 +2804,14 @@ async function main() {
         if (!row || row.price == null) continue;
         // Only touch a price that is zero, unless a full rewrite is asked for.
         if (Number(v.price) !== 0 && !FORCE) continue;
-        if (Number(v.price) === Number(row.price)) continue;
-        updates.push({ id: v.id, price: row.price });
+        // A bangle's larger sizes cost more, so each size gets its own price here rather
+        // than every size being reset to the base until --sync-bangles runs.
+        let price = row.price;
+        const bangle = bangleFor(code);
+        const size = bangle && bangle.sizes.find((s) => s.label === variantOption(v, bangle.optionName || 'Size'));
+        if (size && Number(row.price) > 0) price = banglePrice(Number(row.price), size).toFixed(2);
+        if (Number(v.price) === Number(price)) continue;
+        updates.push({ id: v.id, price });
       }
       if (!updates.length) {
         // Say so rather than counting a failure to match as "already correct".
@@ -3004,14 +3035,18 @@ async function main() {
       const wantMetals = plan && plan.materials.length ? plan.materials.map((m) => m.label) : [];
       const basePrice = new Map((plan?.materials || []).map((m) => [m.label, Number(m.price)]));
       const cat = categoryOfCode(code, p.title);
+      const bangle = bangleFor(code);
+      const sizeOptName = bangle ? (bangle.optionName || 'Size') : lenOptName;
       const realOpts = (p.options || []).filter((o) => o.name !== 'Title');
-      const hasLen = realOpts.some((o) => o.name === lenOptName);
-      const wantLens = hasLen && cat && (cfg.lengths || {})[cat] ? cfg.lengths[cat] : [null];
+      const hasLen = realOpts.some((o) => o.name === sizeOptName);
+      // A bangle must always have its sizes, so a missing Size option shows as missing variants.
+      const wantLens = bangle ? bangle.sizes.map((s) => s.label)
+        : hasLen && cat && (cfg.lengths || {})[cat] ? cfg.lengths[cat] : [null];
 
       // ---- options ----
       const metalOpt = realOpts.find((o) => o.name === cfg.optionName);
       if (!metalOpt) issues.push(`option not called "${cfg.optionName}"`);
-      const strays = realOpts.filter((o) => o.name !== cfg.optionName && o.name !== lenOptName);
+      const strays = realOpts.filter((o) => o.name !== cfg.optionName && o.name !== sizeOptName);
       if (strays.length) issues.push(`extra option: ${strays.map((o) => o.name).join(', ')}`);
 
       // ---- variants: every metal x length present, priced right ----
@@ -3019,7 +3054,7 @@ async function main() {
       for (const v of p.variants || []) {
         const parts = Object.fromEntries(String(v.options).split(' | ')
           .map((x) => { const i = x.indexOf('='); return [x.slice(0, i), x.slice(i + 1)]; }));
-        const key = `${parts[cfg.optionName] || ''}||${parts[lenOptName] || ''}`;
+        const key = `${parts[cfg.optionName] || ''}||${parts[sizeOptName] || ''}`;
         actual.set(key, v);
       }
       if (!wantMetals.length) issues.push('no price in price-list.csv');
@@ -3029,7 +3064,10 @@ async function main() {
           const v = actual.get(`${metal}||${len || ''}`);
           if (!v) { missing.push(`${metal}${len ? ' ' + len : ''}`); continue; }
           const b = basePrice.get(metal) ?? 0;
-          const want = b > 0 ? roundPrice(Math.max(0, b + (len ? lengthDeltaFor(cat, len) : 0))) : 0;
+          const size = bangle && len ? bangle.sizes.find((s) => s.label === len) : null;
+          const want = b <= 0 ? 0
+            : size ? banglePrice(b, size)
+            : roundPrice(Math.max(0, b + (len ? lengthDeltaFor(cat, len) : 0)));
           const got = Number(v.price);
           if (got === 0 && want > 0) zero.push(`${metal}${len ? ' ' + len : ''}`);
           else if (Math.abs(got - want) > 0.01) badPrice.push(`${metal}${len ? ' ' + len : ''}: ${got} want ${want.toFixed(2)}`);
@@ -3157,6 +3195,8 @@ async function main() {
       const hit = findInIndex(code);
       if (!hit) continue;
       const p = hit.product;
+      // A bangle's SKUs carry its size (…-S, …-M, …-L) and are set by --sync-bangles.
+      if (bangleFor(code)) continue;
 
       const d0 = await gql(
         `query($id: ID!) { product(id: $id) { variants(first: 250) {
@@ -3290,6 +3330,114 @@ async function main() {
     return;
   }
 
+  if (SYNC_BANGLES) {
+    if (!STORE_INDEX) die('--sync-bangles needs credentials so it can read your store.');
+    const b = cfg.bangles;
+    if (!b || !Array.isArray(b.sizes) || !b.sizes.length) die('config.json needs "bangles": { "codes": [...], "sizes": [...] }');
+    const optName = b.optionName || 'Size';
+    const labels = b.sizes.map((s) => s.label);
+    const byLabel = new Map((cfg.materials || []).map((m) => [String(m.label).trim().toLowerCase(), m]));
+    const materialOf2 = (label) => {
+      const k = String(label || '').trim().toLowerCase();
+      const al = (cfg.materialAliases || {})[k];
+      return byLabel.get(k) || (al ? byLabel.get(String(al).toLowerCase()) : null);
+    };
+    const tracked = !!cfg.defaults.trackInventory;
+
+    for (const raw of b.codes || []) {
+      const code = String(raw).toUpperCase();
+      if (ONLY && !ONLY.includes(code)) continue;
+      const hit = findInIndex(code);
+      if (!hit) { console.log(`⚠ ${code.padEnd(11)} not in the store yet — create it first`); continue; }
+      const id = hit.product.id;
+      const item = (priceList.has(code) ? itemFromPriceList(code, priceList.get(code)) : null) || sheetByCode.get(code);
+      if (!item) { console.log(`⚠ ${code.padEnd(11)} no price in ${cfg.priceListCsv} — add its row first`); continue; }
+      const baseByMetal = new Map(item.rows.filter((r) => r.price != null).map((r) => [r.metal.key, Number(r.price)]));
+
+      const read = async () => (await gql(
+        `query($id: ID!) { product(id: $id) {
+           options { id name optionValues { name } }
+           variants(first: 250) { nodes { id price sku selectedOptions { name value } inventoryItem { tracked } } } } }`,
+        { id }
+      )).product;
+      let p = await read();
+
+      // Every option except the metal goes, unless it is already exactly the right Size
+      // option. That removes the bracelet "Length" (6.5 in - 8 in) this bangle was created with.
+      const isRightSize = (o) => o.name === optName && o.optionValues.map((v) => v.name).join('|') === labels.join('|');
+      const remove = p.options.filter((o) => o.name !== cfg.optionName && o.name !== 'Title' && !isRightSize(o));
+      const hasSize = p.options.some(isRightSize);
+
+      console.log(`· ${code.padEnd(11)} ${remove.length ? `replace "${remove.map((o) => o.name).join('/')}" with` : hasSize ? 'reprice' : 'add'} "${optName}": ${labels.join(', ')}`);
+      for (const m of cfg.materials || []) {
+        const base = baseByMetal.get(m.metal);
+        if (base == null) continue;
+        console.log(`    ${m.label.padEnd(20)} ${b.sizes.map((s) => `$${banglePrice(base, s).toFixed(2)}`.padStart(10)).join('')}`);
+      }
+      if (DRY) continue;
+
+      try {
+        if (remove.length) {
+          // POSITION keeps the variants of each removed option's first value, one per metal.
+          const d = await gql(
+            `mutation($productId: ID!, $options: [ID!]!) {
+               productOptionsDelete(productId: $productId, options: $options, strategy: POSITION) {
+                 userErrors { field message }
+               }
+             }`,
+            { productId: id, options: remove.map((o) => o.id) }
+          );
+          checkErrors(d.productOptionsDelete, 'productOptionsDelete');
+        }
+        if (!hasSize) {
+          const d = await gql(
+            `mutation($productId: ID!, $options: [OptionCreateInput!]!) {
+               productOptionsCreate(productId: $productId, options: $options, variantStrategy: CREATE) {
+                 userErrors { field message }
+               }
+             }`,
+            { productId: id, options: [{ name: optName, values: labels.map((n) => ({ name: n })) }] }
+          );
+          checkErrors(d.productOptionsCreate, 'productOptionsCreate');
+        }
+
+        p = await read();
+        const updates = [];
+        for (const v of p.variants.nodes) {
+          const pick = (n) => (v.selectedOptions.find((o) => o.name === n) || {}).value;
+          const m = materialOf2(pick(cfg.optionName));
+          const size = b.sizes.find((s) => s.label === pick(optName));
+          if (!m || !size) {
+            console.log(`  ⚠ variant "${v.selectedOptions.map((o) => o.value).join(' / ')}" not recognised — left alone`);
+            continue;
+          }
+          const base = baseByMetal.get(m.metal);
+          // No base price means it stays at 0 — a surcharge on nothing is not a price.
+          const price = base > 0 ? banglePrice(base, size).toFixed(2) : '0.00';
+          const sku = `${code}-${m.metal}-${m.colour}-${size.sku}`;
+          if (price === Number(v.price).toFixed(2) && v.sku === sku && v.inventoryItem?.tracked === tracked) continue;
+          updates.push({ id: v.id, price, inventoryItem: { sku, tracked } });
+        }
+        for (let i = 0; i < updates.length; i += 100) {
+          const d = await gql(
+            `mutation($productId: ID!, $variants: [ProductVariantsBulkInput!]!) {
+               productVariantsBulkUpdate(productId: $productId, variants: $variants) {
+                 userErrors { field message }
+               }
+             }`,
+            { productId: id, variants: updates.slice(i, i + 100) }
+          );
+          checkErrors(d.productVariantsBulkUpdate, 'productVariantsBulkUpdate');
+        }
+        console.log(`✓ ${code.padEnd(11)} ${p.variants.nodes.length} variants, ${updates.length} updated`);
+      } catch (e) {
+        console.log(`✖ ${code.padEnd(11)} ${e.message.slice(0, 160)}`);
+      }
+    }
+    console.log(DRY ? '\nDry run — nothing changed. Add --live to apply.\n' : '');
+    return;
+  }
+
   if (SYNC_LENGTHS) {
     if (!STORE_INDEX) die('--sync-lengths needs credentials so it can read your store.');
     const optName = cfg.lengthOption || 'Length';
@@ -3354,6 +3502,10 @@ async function main() {
       if (SKIP.has(code.toUpperCase())) {
         why.adjustable++;
         console.log(`- ${code.padEnd(11)} skipped: listed in config "noLengthCodes"`);
+        continue;
+      }
+      if (bangleFor(code)) {
+        console.log(`- ${code.padEnd(11)} skipped: a bangle — its sizes come from --sync-bangles`);
         continue;
       }
       const cat = catOf(code, hitTitleFor(code));

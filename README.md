@@ -91,6 +91,27 @@ missing descriptions. Add `--force` to rewrite everything.
 
 ---
 
+## Bangles
+
+A bangle is rigid and sized by inside diameter, so it doesn't get the bracelet chain lengths
+(6.5 – 8 in). The codes listed under `"bangles"` in `config.json` get a **Size** option instead:
+
+| Size | Price |
+|---|---|
+| Small (2.24 in) | the price-list price |
+| Medium (2.36 in) | + 5% |
+| Large (2.48 in) | + 10% |
+
+Prices are rounded down to $10 like everything else, and SKUs end in `-S`, `-M` or `-L`.
+
+    node import.js --sync-bangles          preview
+    node import.js --sync-bangles --live   apply (also run by ./reprice.sh)
+
+The first live run replaces the old Length option. To add another bangle, put its code in
+`"bangles" → "codes"` and give it a row in `price-list.csv`.
+
+---
+
 ## Useful flags
 
     node import.js                        dry run — shows what would happen, changes nothing
